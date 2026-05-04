@@ -1,0 +1,409 @@
+"use client";
+
+import Image from "next/image";
+import { MdOutlineArrowOutward } from "react-icons/md";
+import { FaOpensuse } from "react-icons/fa6";
+import { useContactModal } from "../context/ContactModalContext";
+import Link from "next/link";
+
+import {
+  IoLogoReact,
+  IoLogoHtml5,
+  IoLogoCss3,
+  IoLogoJavascript,
+} from "react-icons/io5";
+import { SiNextdotjs, SiFigma } from "react-icons/si";
+
+export default function Home() {
+  const { openModal } = useContactModal();
+  return (
+    <div className="flex min-h-screen pt-24 flex-col items-center font-sans scroll-smooth">
+      <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-size-[2rem_2rem]"></div>
+
+      <div className="pt-20 flex items-center flex-col">
+        <div className="flex items-center justify-center text-blue-500 font-semibold">
+          Personal Portfolio
+        </div>
+
+        <div className="relative">
+          <div
+            className="w-48 h-fit bg-blue-500 absolute top-20 -left-72 rounded -rotate-12 hover:-rotate-10  bg-linear-to-b
+    from-blue-400
+    to-blue-600
+    text-white
+    font-medium text-[14px]
+    shadow-[inset_0_1px_0_rgba(255,255,255,0.25),inset_0_-1px_0_rgba(0,0,0,0.18)]
+    hover:from-blue-500 hover:to-blue-700
+    active:translate-y-px
+    transition-all duration-200
+    cursor-pointer
+    p-6
+    "
+          >
+            <h1 className=" tracking-wider font-semibold mb-2">Expert In</h1>
+
+            <div className="mt-2">UI Development</div>
+            <div className="mt-2">Web Development</div>
+            <div className="mt-2">UI UX Design</div>
+          </div>
+
+          <h1 className="text-6xl text-center font-semibold text-gray-700">
+            Building <span className="text-blue-500">User-Centric</span>
+          </h1>
+
+          <h1 className="text-6xl text-center font-semibold  mb-4 text-gray-700">
+            Web Experiences
+          </h1>
+        </div>
+
+        <div className="flex justify-center">
+          <p className="text-md text-center text-gray-500  w-7/12 ">
+            Bridging UI/UX excellence with clean, performant code. I specialize
+            in transforming complex workflows into intuitive, user-centric web
+            applications
+          </p>
+        </div>
+
+        <div className="flex items-center justify-center mt-6 ">
+          <button
+            onClick={openModal}
+            className="
+    bg-gradient-to-b
+    from-blue-400
+    to-blue-600
+    rounded-md
+    text-white
+    h-10 w-36
+    font-medium text-[14px]
+    flex items-center gap-2 justify-center
+    shadow-[inset_0_1px_0_rgba(255,255,255,0.25),inset_0_-1px_0_rgba(0,0,0,0.18)]
+    hover:from-blue-500 hover:to-blue-700
+    active:translate-y-[1px]
+    transition-all duration-200
+    cursor-pointer
+  "
+          >
+            Get in Touch <MdOutlineArrowOutward />
+          </button>
+        </div>
+
+        <div className="flex justify-center mt-12">
+          <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex items-center gap-2 text-sm font-medium text-gray-600">
+              <IoLogoReact className="text-blue-500 text-lg" />
+              ReactJS
+            </div>
+
+            <div className="flex items-center gap-2 text-sm font-medium text-gray-600">
+              <SiNextdotjs className="text-black text-lg" />
+              Next.js
+            </div>
+
+            <div className="flex items-center gap-2 text-sm font-medium text-gray-600">
+              <SiFigma className="text-red-500 text-lg" />
+              Figma
+            </div>
+
+            <div className="flex items-center gap-2 text-sm font-medium text-gray-600">
+              <IoLogoHtml5 className="text-orange-500 text-lg" />
+              HTML
+            </div>
+
+            <div className="flex items-center gap-2 text-sm font-medium text-gray-600">
+              <IoLogoCss3 className="text-blue-600 text-lg" />
+              CSS
+            </div>
+
+            <div className="flex items-center gap-2 text-sm font-medium text-gray-600">
+              <IoLogoJavascript className="text-yellow-400 text-lg" />
+              JavaScript
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* 
+      <div className="flex items-center justify-center w-full">
+        <div className="bg-blue-200 mt-36 w-[70%] border-4 border-blue-200 rounded-xl">
+          <img src="./dash.png" alt="" />
+        </div>
+      </div> */}
+
+      <div className="mt-28  flex items-end justify-between w-6xl">
+        <div>
+          <h1 className="font-bold text-sm md:text-base ">About Me</h1>
+          <h1 className="text-3xl md:w-[60%] lg:w-[60%] text-slate-500/60">
+            Explore my professional journey—where design meets development.
+          </h1>
+        </div>
+
+        <button
+          className="
+    bg-gradient-to-b
+    from-blue-400
+    to-blue-600
+    rounded-md
+    text-white
+    h-10 w-36
+    font-medium text-[14px]
+    flex items-center gap-2 justify-center
+    shadow-[inset_0_1px_0_rgba(255,255,255,0.25),inset_0_-1px_0_rgba(0,0,0,0.18)]
+    hover:from-blue-500 hover:to-blue-700
+    active:translate-y-px
+    transition-all duration-200
+    cursor-pointer
+  "
+        >
+          <Link href="/about">Learn More</Link>
+
+          <MdOutlineArrowOutward />
+        </button>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full max-w-6xl mt-12">
+        {/* Card 1 - Zapier Integration */}
+        <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-xl flex flex-col justify-between min-h">
+          <div>
+            <div className="w-20 h-20 border border-gray-200 rounded-full flex items-center justify-center mb-4">
+              <img
+                src="/me2.png"
+                alt="Aswanth"
+                className="relative w-full h-full md:w-40  object-cover rounded-full scale-110  shadow-lg"
+              />
+            </div>
+            <h2 className="text-gray-900 font-bold text-lg leading-tight mb-2">
+              Aswanth UP
+            </h2>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Unlock effortless automation. Your gateway to effortless
+              automation — connect your favourite apps, streamline workflows,
+              and supercharge productivity with ease.
+            </p>
+          </div>
+          <div className="flex items-center justify-between mt-6">
+            <button className="flex items-center gap-1.5 text-gray-500 text-sm font-medium hover:text-gray-700 transition">
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+              Configure
+            </button>
+            {/* Toggle */}
+            <button
+              className={`relative w-12 h-6 rounded-full transition-colors duration-300 focus:outline-none  "bg-blue-500" : "bg-gray-200"}`}
+            >
+              <span
+                className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-300  "translate-x-6" : "translate-x-0"}`}
+              />
+            </button>
+          </div>
+        </div>
+
+        {/* Middle column: 3 stacked cards */}
+        <div className="flex flex-col gap-4">
+          {/* Trackers Connected */}
+          <div className="bg-white border rounded-xl border-gray-200 hover:shadow-xl p-5 ">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-gray-900 font-bold text-base">
+                  Trackers Connected
+                </p>
+                <p className="text-gray-400 text-xs mt-0.5">
+                  09 Active Integrations
+                </p>
+              </div>
+              <div className="flex gap-1.5">
+                {/* Teams icon */}
+                <div className="w-7 h-7 bg-purple-600 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">T</span>
+                </div>
+                {/* Slack icon */}
+                <div className="w-7 h-7 bg-pink-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">S</span>
+                </div>
+                {/* Jira icon */}
+                <div className="w-7 h-7 bg-blue-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">J</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Focusing */}
+          <div className="bg-white rounded-xl  p-5 border border-gray-200 hover:shadow-xl">
+            <div className="flex items-start justify-between mb-1">
+              <div>
+                <p className="text-gray-900 font-bold text-base">Focusing</p>
+                <p className="text-gray-400 text-xs">Productivity Analytics</p>
+              </div>
+              <span className="text-blue-500 text-xs font-semibold bg-blue-50 px-2 py-0.5 rounded-xs">
+                Range Ratio
+              </span>
+            </div>
+            <p className="text-5xl font-extrabold text-gray-900 mt-3 tracking-tight">
+              99%
+            </p>
+            <div className="flex justify-between mt-2">
+              <span className="text-gray-400 text-xs">Maximum of focus</span>
+              <span className="text-gray-500 text-xs font-semibold">
+                Monthly Focus
+              </span>
+            </div>
+          </div>
+
+          {/* Shortcut Keys */}
+          <div className="bg-white rounded-xl px-5 py-4 border border-gray-200 hover:shadow-xl flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-blue-50 rounded-xl flex items-center justify-center">
+                <svg
+                  className="w-4 h-4 text-blue-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p className="text-gray-900 font-semibold text-sm">
+                  Shortcut Keys
+                </p>
+                <p className="text-gray-400 text-xs">
+                  Faster easier way to access the features.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-1">
+              <kbd className="bg-gray-100 text-gray-600 text-xs font-semibold px-2 py-1 rounded-lg">
+                ⌘
+              </kbd>
+              <span className="text-gray-400 text-xs">+</span>
+              <kbd className="bg-gray-100 text-gray-600 text-xs font-semibold px-2 py-1 rounded-lg">
+                ⌥
+              </kbd>
+              <span className="text-gray-400 text-xs">+</span>
+              <kbd className="bg-gray-100 text-gray-600 text-xs font-semibold px-2 py-1 rounded-lg">
+                M
+              </kbd>
+            </div>
+          </div>
+        </div>
+
+        {/* Card 3 - 10X + Team Productivity */}
+        <div className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-xl flex flex-col justify-between min-h-">
+          <div>
+            <p className="text-8xl font-black text-gray-900 tracking-tighter leading-none">
+              500 +
+            </p>
+            <p className="text-gray-900 font-bold text-lg">Screens Developed</p>
+          </div>
+          <div className="mt-6">
+            <p className="text-gray-900 font-bold text-lg">
+              Team's Productivity
+            </p>
+            <p className="text-gray-400 text-sm mt-1 leading-relaxed">
+              Boost your team's efficiency with our next-gen productivity
+              solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-28  flex items-end justify-between w-6xl">
+        <div>
+          <h1 className="font-bold text-sm md:text-base ">Projects</h1>
+          <h1 className="text-3xl md:w-[60%] lg:w-[60%] text-slate-500/60">
+            Explore my professional journey—where design meets development.
+          </h1>
+        </div>
+
+        <button
+          className="
+    bg-gradient-to-b
+    from-blue-400
+    to-blue-600
+    rounded-md
+    text-white
+    h-10 w-36
+    font-medium text-[14px]
+    flex items-center gap-2 justify-center
+    shadow-[inset_0_1px_0_rgba(255,255,255,0.25),inset_0_-1px_0_rgba(0,0,0,0.18)]
+    hover:from-blue-500 hover:to-blue-700
+    active:translate-y-px
+    transition-all duration-200
+    cursor-pointer
+  "
+        >
+          <Link href="/about">Learn More</Link>
+
+          <MdOutlineArrowOutward />
+        </button>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 max-w-6xl mt-12 gap-6">
+        {/* Card 1 */}
+        <div>
+          <img
+            className="rounded-md w-full h-64 object-cover"
+            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+            alt="profile1"
+          />
+          <h2 className="text-gray-900 font-bold text-lg mt-4">Aswanth UP</h2>
+          <p className="text-gray-400 text-sm mt-2">
+            UI Developer & Designer focused on building clean, scalable
+            interfaces using React and Tailwind CSS.
+          </p>
+        </div>
+
+        {/* Card 2 */}
+        <div>
+          <img
+            className="rounded-md w-full h-64 object-cover"
+            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2"
+            alt="profile2"
+          />
+          <h2 className="text-gray-900 font-bold text-lg mt-4">Anjali Nair</h2>
+          <p className="text-gray-400 text-sm mt-2">
+            UX Designer passionate about crafting intuitive user journeys and
+            meaningful digital experiences.
+          </p>
+        </div>
+
+        {/* Card 3 */}
+        <div>
+          <img
+            className="rounded-md w-full h-64 object-cover"
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+            alt="profile3"
+          />
+          <h2 className="text-gray-900 font-bold text-lg mt-4">Rahul Menon</h2>
+          <p className="text-gray-400 text-sm mt-2">
+            Frontend Engineer specializing in performance optimization and
+            modern JavaScript frameworks.
+          </p>
+        </div>
+      </div>
+
+      <div className="h-80 mt-36">Comming soon..</div>
+    </div>
+  );
+}
