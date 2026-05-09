@@ -1,13 +1,18 @@
+import { IoStar } from "react-icons/io5";
+
 export default function About() {
   return (
-    <div className="relative min-h-screen flex flex-col items-center pt-36 px-6">
+   
+   
+   <div className="relative min-h-screen flex flex-col items-center pt-36 px-6">
       <div className="absolute inset-0 z-0 grid-bg" />
 
       <div className="relative z-10 max-w-5xl w-full">
-
         <div className="flex justify-center mb-6">
           <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-blue-400 blur-2xl opacity-20"></div>
+            <div className="absolute left-30 inset-0 rounded-full bg-blue-400 h-8 w-8 z-50 text-white  flex justify-center items-center">
+              <IoStar />
+            </div>
             <img
               src="/me2.png"
               alt="Aswanth"
@@ -15,6 +20,10 @@ export default function About() {
             />
           </div>
         </div>
+
+        <h1 className="text-center text-lg font-semibold text-gray-800 mb-2">
+          Aswanth Up
+        </h1>
 
         <p className="text-center text-gray-500 max-w-2xl mx-auto mb-12">
           I'm Aswanth, a UI Developer and Designer focused on building
@@ -43,7 +52,9 @@ export default function About() {
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold text-gray-800">Experience</h2>
+              <h2 className="text-lg font-semibold text-gray-800">
+                Experience
+              </h2>
               <p className="text-gray-500 text-sm mt-2">
                 2+ years working as a UI Developer & Designer, handling complete
                 UI development for real-world applications including healthcare
@@ -66,7 +77,7 @@ export default function About() {
                 "CSS",
                 "Tailwind",
                 "Figma",
-                "UI/UX Design"
+                "UI/UX Design",
               ].map((skill, index) => (
                 <span
                   key={index}
@@ -89,32 +100,32 @@ export default function About() {
             <div className="absolute left-1/2 top-0 h-full w-0.5 bg-gray-200 transform -translate-x-1/2"></div>
 
             <div className="space-y-16">
-
               {[
                 {
                   date: "June 2023 – Present",
                   title: "Chaavie Solutions",
                   location: "Kozhikode, Kerala",
-                  desc: "Worked across UI/UX design, frontend development, and branding. Led UI development for healthcare platforms and mentored junior developers."
+                  desc: "Worked across UI/UX design, frontend development, and branding. Led UI development for healthcare platforms and mentored junior developers.",
                 },
                 {
                   date: "Jan 2025 – Aug 2025",
                   title: "6solve IT Services",
                   location: "Tirunelveli, Tamil Nadu",
-                  desc: "Collaborated on Next.js projects, improving performance and scalability. Strengthened modern frontend architecture skills."
+                  desc: "Collaborated on Next.js projects, improving performance and scalability. Strengthened modern frontend architecture skills.",
                 },
                 {
                   date: "Nov 2022 – Mar 2023",
                   title: "Futura Labs",
                   location: "Kozhikode, Kerala",
-                  desc: "Started journey in UI/UX design and frontend basics including HTML, CSS, and Figma."
+                  desc: "Started journey in UI/UX design and frontend basics including HTML, CSS, and Figma.",
                 },
                 {
                   date: "July 2016 – March 2019",
                   title: "BSc Computer Science",
-                  location: "Hi-Tech Arts and Science College, Kallachi, Kerala",
-                  desc: "I completed my BSc in Computer Science from Hi-Tech Arts and Science College. During my studies, I also worked on academic projects to enhance my practical skills alongside theoretical knowledge."
-                }
+                  location:
+                    "Hi-Tech Arts and Science College, Kallachi, Kerala",
+                  desc: "I completed my BSc in Computer Science from Hi-Tech Arts and Science College. During my studies, I also worked on academic projects to enhance my practical skills alongside theoretical knowledge.",
+                },
               ].map((item, index) => (
                 <div
                   key={index}
@@ -132,9 +143,7 @@ export default function About() {
                     <p className="text-xs text-gray-400 mb-2">
                       {item.location}
                     </p>
-                    <p className="text-sm text-gray-500">
-                      {item.desc}
-                    </p>
+                    <p className="text-sm text-gray-500">{item.desc}</p>
                   </div>
 
                   <div className="absolute left-1/2 transform -translate-x-1/2">
@@ -142,23 +151,21 @@ export default function About() {
                   </div>
                 </div>
               ))}
-
             </div>
           </div>
         </div>
         {/* JOURNEY SECTION END */}
 
         <div className="mt-16 text-center">
-          <p className="text-gray-500 mb-4">
-            Interested in working together?
-          </p>
+          <p className="text-gray-500 mb-4">Interested in working together?</p>
 
           <button className="px-6 h-10 rounded-md text-white bg-gradient-to-b from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 transition">
             Contact Me
           </button>
         </div>
-
       </div>
+      
+      <div className="h-80 mt-36">Comming soon..</div>
     </div>
   );
 }

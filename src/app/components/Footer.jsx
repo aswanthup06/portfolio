@@ -7,8 +7,8 @@ import { FaWebflow } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="w-full flex justify-center mt-24 pb-6">
-      <div className="border border-gray-200 bg-white rounded-xl shadow-lg w-fit px-10 py-6">
+    <footer className="w-full flex justify-center pb-6 bg-transparent">
+      <div className="border bg-white border-gray-200 rounded-xl shadow-lg w-fit px-10 py-6">
 
         {/* Top Section */}
         <div className="flex items-center justify-between gap-16">
@@ -30,7 +30,7 @@ export default function Footer() {
 
             <div>
               <h4 className="text-sm font-semibold text-gray-900">
-                Aswanth UI
+                Aswanth UP
               </h4>
               <p className="text-xs text-gray-500">
                 UI Developer & Designer
@@ -131,5 +131,6 @@ export default function Footer() {
 
       </div>
     </footer>
+
   );
 }

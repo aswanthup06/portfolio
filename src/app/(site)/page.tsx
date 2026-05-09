@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { MdOutlineArrowOutward } from "react-icons/md";
-import { FaOpensuse } from "react-icons/fa6";
 import { useContactModal } from "../context/ContactModalContext";
 import Link from "next/link";
 
@@ -17,9 +16,8 @@ import { SiNextdotjs, SiFigma } from "react-icons/si";
 export default function Home() {
   const { openModal } = useContactModal();
   return (
-    <div className="flex min-h-screen pt-24 flex-col items-center font-sans scroll-smooth">
-      <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-size-[2rem_2rem]"></div>
-
+    <div className="flex relative min-h-screen pt-24 flex-col items-center font-sans scroll-smooth">
+      <div className="absolute inset-0 grid-bg -z-10" />
       <div className="pt-20 flex items-center flex-col">
         <div className="flex items-center justify-center text-blue-500 font-semibold">
           Personal Portfolio
@@ -131,8 +129,8 @@ export default function Home() {
       <div className="mt-28  flex items-end justify-between w-6xl">
         <div>
           <h1 className="font-bold text-sm md:text-base ">About Me</h1>
-          <h1 className="text-3xl md:w-[60%] lg:w-[60%] text-slate-500/60">
-            Explore my professional journey—where design meets development.
+          <h1 className="text-3xl text-slate-500/60">
+            Designing Seamless User Experiences
           </h1>
         </div>
 
@@ -331,8 +329,8 @@ export default function Home() {
       <div className="mt-28  flex items-end justify-between w-6xl">
         <div>
           <h1 className="font-bold text-sm md:text-base ">Projects</h1>
-          <h1 className="text-3xl md:w-[60%] lg:w-[60%] text-slate-500/60">
-            Explore my professional journey—where design meets development.
+          <h1 className="text-3xl  text-slate-500/60">
+            Featured Work Showcase
           </h1>
         </div>
 
@@ -363,8 +361,8 @@ export default function Home() {
         {/* Card 1 */}
         <div>
           <img
-            className="rounded-md w-full h-64 object-cover"
-            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+            className="rounded-lg w-full h-64 object-cover border border-gray-400"
+            src="/nvo.webp"
             alt="profile1"
           />
           <h2 className="text-gray-900 font-bold text-lg mt-4">Aswanth UP</h2>
@@ -377,8 +375,8 @@ export default function Home() {
         {/* Card 2 */}
         <div>
           <img
-            className="rounded-md w-full h-64 object-cover"
-            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2"
+            className="rounded-lg w-full h-64 object-cover "
+            src="/happy2.webp"
             alt="profile2"
           />
           <h2 className="text-gray-900 font-bold text-lg mt-4">Anjali Nair</h2>
@@ -391,8 +389,8 @@ export default function Home() {
         {/* Card 3 */}
         <div>
           <img
-            className="rounded-md w-full h-64 object-cover"
-            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+            className="rounded-lg w-full h-64 object-cover"
+            src="blo8.png"
             alt="profile3"
           />
           <h2 className="text-gray-900 font-bold text-lg mt-4">Rahul Menon</h2>
@@ -401,6 +399,13 @@ export default function Home() {
             modern JavaScript frameworks.
           </p>
         </div>
+      </div>
+
+
+      <div className="h-64 bg-gray-600  w-6xl mt-20">
+
+
+
       </div>
 
       <div className="h-80 mt-36">Comming soon..</div>

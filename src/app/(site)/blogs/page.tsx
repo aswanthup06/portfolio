@@ -12,9 +12,16 @@ export default function Blogs() {
       desc: "Best practices to improve performance in React apps using memoization and lazy loading.",
       date: "March 2026",
       tag: "Development",
-      image: "https://images.unsplash.com/photo-1581276879432-15a19d654956"
+      image: "https://images.unsplash.com/photo-1547658719-da2b51169166"
     },
     {
+      title: "From Figma to Production",
+      desc: "Bridging the gap between design and development efficiently.",
+      date: "February 2026",
+      tag: "Workflow",
+      image: "https://images.unsplash.com/photo-1547658719-da2b51169166"
+    },
+     {
       title: "From Figma to Production",
       desc: "Bridging the gap between design and development efficiently.",
       date: "February 2026",
@@ -44,24 +51,24 @@ export default function Blogs() {
           {blogs.map((blog, index) => (
             <div
               key={index}
-              className="group bg-white/80 backdrop-blur-md border border-gray-100 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
+              className="group  overflow-hidden  transition duration-300"
             >
 
               <div className="overflow-hidden">
                 <img
                   src={`${blog.image}?auto=format&fit=crop&w=800&q=80`}
                   alt={blog.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition duration-300"
+                  className="w-full h-48 object-cover rounded-lg group-hover:scale-105 transition duration-300"
                 />
               </div>
 
-              <div className="p-5">
+              <div className=" mt-2">
 
-                <span className="text-xs text-blue-500 font-medium">
+                <span className="text-xs text-blue-500 font-medium ">
                   {blog.tag}
                 </span>
 
-                <h3 className="text-lg font-semibold text-gray-800 mt-2">
+                <h3 className="text-lg font-semibold text-gray-800 ">
                   {blog.title}
                 </h3>
 

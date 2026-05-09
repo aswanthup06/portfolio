@@ -17,7 +17,7 @@ export default function Projects() {
     {
       title: "Doctor One",
       category: "Case Study",
-      image: "https://images.unsplash.com/photo-1581090700227-1e8e0c1f8f9b",
+      image: "https://images.unsplash.com/photo-1549880181-56a44cf4a9a5",
     },
     {
       title: "Dashboard UI",
@@ -78,16 +78,16 @@ export default function Projects() {
           {filtered.map((item, i) => (
             <div
               key={i}
-              className="group bg-white/80 backdrop-blur-md rounded-xl overflow-hidden shadow-md hover:shadow-xl transition"
+              className="group overflow-hidden transition"
             >
-              <div className="overflow-hidden">
+              <div className="rounded-lg overflow-hidden">
                 <img
                   src={`${item.image}?auto=format&fit=crop&w=800&q=80`}
-                  className="w-full h-52 object-cover group-hover:scale-105 transition"
+                  className="w-full h-52 object-cover group-hover:scale-105 transition "
                 />
               </div>
 
-              <div className="p-4">
+              <div className="">
                 <span className="text-xs text-blue-500">
                   {item.category}
                 </span>
