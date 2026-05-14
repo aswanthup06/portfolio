@@ -3,7 +3,71 @@
 import Image from "next/image";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { useContactModal } from "../context/ContactModalContext";
+import { LuCircleArrowRight } from "react-icons/lu";
 import Link from "next/link";
+
+interface Testimonial {
+  avatar: string;
+  quote: string;
+  name: string;
+  role: string;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    avatar: "/me.jpg",
+    quote:
+      "As a project manager, I used to spend hours chasing updates. Now I open Workhorse and instantly know where everything stands, it saves me more time than I expected.",
+    name: "Gokul Hari",
+    role: "Co-Founder of Chaavie Solutions",
+  },
+  {
+    avatar: "/me.jpg",
+    quote:
+      "Working with Aswanth has been a great experience. His UI/UX skills, creative thinking, and development knowledge help transform ideas into practical and user-friendly digital products. He has a professional approach and consistently delivers quality results.",
+    name: "Muhammadh Musthafa",
+    role: "Managing Director at G tec Kunnumpuram ",
+  },
+  {
+    avatar: "/me.jpg",
+    quote:
+      "An exceptional UI developer who consistently delivered clean, modern, and user-friendly designs. His attention to detail, creativity, and understanding of user experience greatly improved the quality of projects. As a full-stack developer, working with him made development smoother and the final product much more polished and professional.",
+    name: "Bhavana Raj",
+    role: "MERN Stack Developer at Chaavie Solutions",
+  },
+  {
+    avatar: "/me2.png",
+    quote:
+      "I was skeptical at first, but within a week I could see the difference. Tasks were clearer, updates were easier to find, and deadlines stopped slipping. It's the kind of tool you don't realize you needed until it's there.",
+    name: "Marc Rowland",
+    role: "Founder at Incite.io",
+  },
+];
+
+function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+  return (
+    <div className="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col gap-4 hover:shadow-md transition-shadow duration-200">
+      <div
+        className={`w-14 h-14 rounded-full flex items-center justify-center font-semibold text-sm`}
+      >
+        <img
+          src={testimonial.avatar}
+          alt={testimonial.name}
+          className="w-14 h-14 rounded-full object-cover"
+        />
+      </div>
+      <p className="text-sm text-gray-700 leading-relaxed flex-1">
+        &ldquo;{testimonial.quote}&rdquo;
+      </p>
+      <div>
+        <p className="text-sm font-semibold text-gray-900">
+          {testimonial.name}
+        </p>
+        <p className="text-xs text-gray-500 mt-0.5">{testimonial.role}</p>
+      </div>
+    </div>
+  );
+}
 
 import {
   IoLogoReact,
@@ -12,6 +76,14 @@ import {
   IoLogoJavascript,
 } from "react-icons/io5";
 import { SiNextdotjs, SiFigma } from "react-icons/si";
+
+const strengths: string[] = [
+  "Pixel-Perfect UI Development",
+  "99% Figma to Code Accuracy",
+  "Clean & Scalable Code",
+  "Fast Responsive Interfaces",
+  "Detail-Oriented Execution",
+];
 
 export default function Home() {
   const { openModal } = useContactModal();
@@ -172,9 +244,11 @@ export default function Home() {
               Aswanth UP
             </h2>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Unlock effortless automation. Your gateway to effortless
-              automation — connect your favourite apps, streamline workflows,
-              and supercharge productivity with ease.
+              I design and develop clean, responsive, and user-focused digital
+              experiences with a strong focus on modern UI development. With
+              experience in React, Tailwind CSS, Flutter, and UI/UX design, I
+              bridge the gap between creativity and functionality to build
+              interfaces that are visually appealing, scalable, and easy to use.
             </p>
           </div>
           <div className="flex items-center justify-between mt-6">
@@ -401,12 +475,80 @@ export default function Home() {
         </div>
       </div>
 
-
-      <div className="h-64 bg-gray-600  w-6xl mt-20">
-
-
-
+      <div className="w-6xl mt-20">
+        <h1 className="font-bold text-sm md:text-base ">Why Aswanth?</h1>
+        <h1 className="text-3xl  text-slate-500/60">
+          Blending UI design and development into seamless products.
+        </h1>
       </div>
+
+      <div className="min-h-120 bg-gray-600/10  w-6xl mt-10 p-2 grid grid-cols-3 gap-2 rounded-lg">
+        <div className="bg-white rounded-lg overflow-hidden relative">
+          <div className="absolute p-4 text-white bg-black/10 h-full hover:backdrop-blur-xs duration-300">
+            <h1 className="text-lg mb-2 ">Work Approach</h1>
+            <h6>
+              I focus on creating interfaces that are not only visually strong
+              but also practical, user-friendly, and performance-oriented. Every
+              project is approached with attention to usability, consistency,
+              and smooth user interaction.
+            </h6>
+            <div className="mt-6 flex flex-col gap-2">
+              {strengths.map((item: string, index: number) => (
+                <div key={index} className="flex items-center gap-2">
+                  <LuCircleArrowRight className="text-blue-300" />
+                  <h1>{item}</h1>
+                </div>
+              ))}
+            </div>
+          </div>
+          <img src="/bg2.jpg" alt="" className="h-full w-full object-cover" />
+        </div>
+
+        <div className=" rounded-lg grid grid-rows-2 gap-4">
+          <div className="bg-amber-200 rounded-lg overflow-hidden">
+            <img src="/1.jpg" alt="" />
+          </div>
+          <div className="bg-amber-200 rounded-lg overflow-hidden">
+            <img src="/1.jpg" alt="" />
+          </div>
+        </div>
+
+        <div className="bg-white rounded-lg p-4">
+          <img src="/bg.jpg" alt="" />
+        </div>
+      </div>
+
+      <section className=" py-16">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 items-start">
+          {/* Left: heading + badge + CTA */}
+          <div className="shrink-0 lg:w-64">
+            <h2 className="text-4xl font-bold text-gray-900 leading-tight mb-4">
+              Customers love <br />
+              Workhorse{" "}
+              <span role="img" aria-label="heart">
+                ❤️
+              </span>
+            </h2>
+
+            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-xl px-3 py-2">
+              <span className="text-xs text-gray-500">
+                Rated 4.97/5 from over 100+ verified reviews
+              </span>
+            </div>
+
+            <button className="mt-10 bg-gray-900 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-gray-700 transition-colors duration-200">
+              Request a demo
+            </button>
+          </div>
+
+          {/* Right: 2-column testimonial grid */}
+          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {testimonials.map((t) => (
+              <TestimonialCard key={t.name} testimonial={t} />
+            ))}
+          </div>
+        </div>
+      </section>
 
       <div className="h-80 mt-36">Comming soon..</div>
     </div>

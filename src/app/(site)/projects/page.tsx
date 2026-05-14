@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 
 export default function Projects() {
@@ -10,7 +10,7 @@ export default function Projects() {
     "UI Design",
     "Case Study",
     "Illustration",
-    "Drawings"
+    "Drawings",
   ];
 
   const projects = [
@@ -38,20 +38,17 @@ export default function Projects() {
       title: "Sketch Art",
       category: "Drawings",
       image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f",
-    }
+    },
   ];
 
   const filtered =
-    active === "All"
-      ? projects
-      : projects.filter((p) => p.category === active);
+    active === "All" ? projects : projects.filter((p) => p.category === active);
 
   return (
     <div className="relative min-h-screen px-6 py-24">
       <div className="absolute inset-0 grid-bg z-0" />
 
       <div className="relative z-10 max-w-6xl mx-auto">
-
         <h1 className="text-3xl font-semibold text-center text-gray-800 mb-10 mt-6">
           My Works
         </h1>
@@ -76,30 +73,45 @@ export default function Projects() {
         {/* PROJECT GRID */}
         <div className="grid md:grid-cols-3 gap-8">
           {filtered.map((item, i) => (
-            <div
-              key={i}
-              className="group overflow-hidden transition"
-            >
-              <div className="rounded-lg overflow-hidden">
+            <div key={i} className="group overflow-hidden transition">
+              <div className="rounded-2xl overflow-hidden relative">
                 <img
                   src={`${item.image}?auto=format&fit=crop&w=800&q=80`}
                   className="w-full h-52 object-cover group-hover:scale-105 transition "
                 />
+
+                <div className="absolute w-full top-0  flex flex-col justify-between h-full">
+                  <div className="flex gap-2 p-4">
+                    {" "}
+                    <h1 className="bg-white/50 backdrop-blur-sm text-black px-3 py-1 text-xs rounded-full">
+                      ReactJS
+                    </h1>
+                    <h1 className="bg-black/50 text-white px-3 py-1 text-xs rounded-full">
+                      Tailwind CSS
+                    </h1>
+                  </div>
+
+<div className="relative overflow-hidden p-4 pt-8">
+  <div className="absolute bottom-0 left-0 w-full h-24 backdrop-blur-sm mask-[linear-gradient(to_top,black,transparent)]"></div>
+  <div className="absolute bottom-0 left-0 w-full h-20 backdrop-blur-md mask-[linear-gradient(to_top,black,transparent)]"></div>
+  <div className="absolute bottom-0 left-0 w-full h-16 backdrop-blur-xl mask-[linear-gradient(to_top,black,transparent)]"></div>
+<h3 className="relative z-10 text-md font-semibold text-gray-100 mt-1">{item.title}</h3>
+  <span className="relative z-10 text-xs text-blue-500">{item.category}</span>
+  
+</div>
+                </div>
               </div>
 
-              <div className="">
-                <span className="text-xs text-blue-500">
-                  {item.category}
-                </span>
+              {/* <div className="">
+                <span className="text-xs text-blue-500">{item.category}</span>
 
                 <h3 className="text-md font-semibold text-gray-800 mt-1">
                   {item.title}
                 </h3>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
-
       </div>
     </div>
   );
