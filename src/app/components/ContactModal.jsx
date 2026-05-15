@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { useContactModal } from '../context/ContactModalContext';
 
 import { IoMdClose } from 'react-icons/io';
+import { IoCheckmarkCircle } from 'react-icons/io5';
+
 import { MdOutlinePhone } from 'react-icons/md';
 import { LuMailCheck } from 'react-icons/lu';
 import { BsWhatsapp } from 'react-icons/bs';
@@ -19,10 +21,14 @@ export default function ContactModal() {
 
   const [loading, setLoading] = useState(false);
 
+  const [status, setStatus] = useState(null);
+  const [statusMessage, setStatusMessage] = useState('');
+
   /* ---------------- DATA ---------------- */
 
   const contactData = {
     title: 'Get in Touch Now!',
+
     description:
       "I'm open to new projects and freelance opportunities! Whether you need a UI designer or UI developer, let's collaborate and bring your ideas to life.",
 
@@ -126,6 +132,8 @@ export default function ContactModal() {
 
     setLoading(true);
 
+    setStatus(null);
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -144,19 +152,36 @@ export default function ContactModal() {
       const data = await response.json();
 
       if (data.success) {
-        alert('Message sent successfully!');
+        setStatus('success');
+
+        setStatusMessage(
+          'Message sent successfully!'
+        );
 
         setName('');
         setEmail('');
         setMessage('');
       } else {
-        alert(data.message || 'Failed to send message');
+        setStatus('error');
+
+        setStatusMessage(
+          data.message || 'Failed to send message'
+        );
       }
     } catch (error) {
-      alert('Something went wrong');
+      setStatus('error');
+
+      setStatusMessage(
+        'Something went wrong. Please try again.'
+      );
     }
 
     setLoading(false);
+
+    setTimeout(() => {
+      setStatus(null);
+      setStatusMessage('');
+    }, 4000);
   };
 
   /* ---------------- UI ---------------- */
@@ -253,6 +278,8 @@ export default function ContactModal() {
 
           <div className="h-px w-full bg-gray-200 mb-8" />
 
+       
+
           {/* Form */}
 
           <form
@@ -285,7 +312,27 @@ export default function ContactModal() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               className="w-full px-4 text-sm py-3 bg-gray-100 rounded-md resize-none focus:outline-none"
-            />
+            /> 
+
+          {status && (
+            <div
+              className={`mb-6 px-4 rounded-md h-12 flex items-center gap-3 border ${
+                status === 'success'
+                  ? 'bg-green-50 border-green-200 text-green-700'
+                  : 'bg-red-50 border-red-200 text-red-700'
+              }`}
+            >
+              {status === 'success' ? (
+                <IoCheckmarkCircle className="text-2xl" />
+              ) : (
+                <IoMdClose className="text-2xl" />
+              )}
+
+              <p className="text-sm font-medium">
+                {statusMessage}
+              </p>
+            </div>
+          )}
 
             <button
               type="submit"
@@ -295,7 +342,7 @@ export default function ContactModal() {
               flex items-center justify-center
               shadow-[inset_0_1px_0_rgba(255,255,255,0.25),inset_0_-1px_0_rgba(0,0,0,0.18)]
               hover:from-blue-500 hover:to-blue-700
-              transition cursor-pointer"
+              transition cursor-pointer disabled:opacity-70"
             >
               {loading ? 'Sending...' : 'Submit'}
             </button>

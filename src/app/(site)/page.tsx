@@ -15,54 +15,53 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    avatar: "/me.jpg",
+    avatar: "/gokul.png",
     quote:
-      "As a project manager, I used to spend hours chasing updates. Now I open Workhorse and instantly know where everything stands, it saves me more time than I expected.",
+      "As a co-founder, I’ve had the opportunity to work closely with Aswanth on multiple projects, and his contribution has always been exceptional. He has a strong eye for UI/UX, excellent frontend development skills, and a deep understanding of creating modern, user-friendly digital experiences. What impressed me most was his dedication, creativity, and ability to turn ideas into polished products with precision. He consistently brings professionalism, clear communication, and a problem-solving mindset to every project. Any team would benefit from having someone as talented and committed as Aswanth.",
     name: "Gokul Hari",
     role: "Co-Founder of Chaavie Solutions",
   },
   {
-    avatar: "/me.jpg",
+    avatar: "/Musthafa.png",
     quote:
       "Working with Aswanth has been a great experience. His UI/UX skills, creative thinking, and development knowledge help transform ideas into practical and user-friendly digital products. He has a professional approach and consistently delivers quality results.",
     name: "Muhammadh Musthafa",
     role: "Managing Director at G tec Kunnumpuram ",
   },
   {
-    avatar: "/me.jpg",
+    avatar: "/bav.png",
     quote:
       "An exceptional UI developer who consistently delivered clean, modern, and user-friendly designs. His attention to detail, creativity, and understanding of user experience greatly improved the quality of projects. As a full-stack developer, working with him made development smoother and the final product much more polished and professional.",
     name: "Bhavana Raj",
     role: "MERN Stack Developer at Chaavie Solutions",
   },
-  {
-    avatar: "/me2.png",
-    quote:
-      "I was skeptical at first, but within a week I could see the difference. Tasks were clearer, updates were easier to find, and deadlines stopped slipping. It's the kind of tool you don't realize you needed until it's there.",
-    name: "Marc Rowland",
-    role: "Founder at Incite.io",
-  },
 ];
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col gap-4 hover:shadow-md transition-shadow duration-200">
-      <div
-        className={`w-14 h-14 rounded-full flex items-center justify-center font-semibold text-sm`}
-      >
+    <div className="bg-white rounded-xl border border-gray-200 p-6 flex flex-col h-full hover:shadow-md transition-shadow duration-200">
+      {/* Top */}
+      <div className="flex items-center gap-4 mb-4">
         <img
           src={testimonial.avatar}
           alt={testimonial.name}
           className="w-14 h-14 rounded-full object-cover"
         />
       </div>
+
+      {/* Quote */}
       <p className="text-sm text-gray-700 leading-relaxed flex-1">
         &ldquo;{testimonial.quote}&rdquo;
       </p>
-      <div>
+
+      {/* Bottom */}
+      <div className="mt-auto pt-6">
+        <div className="w-full h-px bg-gray-100 mb-4" />
+
         <p className="text-sm font-semibold text-gray-900">
           {testimonial.name}
         </p>
+
         <p className="text-xs text-gray-500 mt-0.5">{testimonial.role}</p>
       </div>
     </div>
@@ -76,6 +75,8 @@ import {
   IoLogoJavascript,
 } from "react-icons/io5";
 import { SiNextdotjs, SiFigma } from "react-icons/si";
+import { FaBehance, FaLinkedinIn } from "react-icons/fa6";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const strengths: string[] = [
   "Pixel-Perfect UI Development",
@@ -229,173 +230,193 @@ export default function Home() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full max-w-6xl mt-12">
-        {/* Card 1 - Zapier Integration */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-xl flex flex-col justify-between min-h">
+      <div className="grid grid-cols-3 grid-rows-[1fr_auto_1fr] gap-5 w-full max-w-6xl mt-12">
+        {/* Box 1 */}
+        <div className="bg-white row-span-3 border border-gray-200 rounded-xl p-6 hover:shadow-xl flex flex-col justify-between">
           <div>
-            <div className="w-20 h-20 border border-gray-200 rounded-full flex items-center justify-center mb-4">
+            <div className="w-20 h-20 border border-gray-200 rounded-full flex items-center justify-center mb-4 overflow-hidden">
               <img
                 src="/me2.png"
                 alt="Aswanth"
-                className="relative w-full h-full md:w-40  object-cover rounded-full scale-110  shadow-lg"
+                className="w-full h-full object-cover scale-110"
               />
             </div>
-            <h2 className="text-gray-900 font-bold text-lg leading-tight mb-2">
+
+            <h2 className="text-gray-900 font-bold text-xl leading-tight mb-2">
               Aswanth UP
             </h2>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              I design and develop clean, responsive, and user-focused digital
-              experiences with a strong focus on modern UI development. With
-              experience in React, Tailwind CSS, Flutter, and UI/UX design, I
-              bridge the gap between creativity and functionality to build
-              interfaces that are visually appealing, scalable, and easy to use.
+
+            <p className="text-blue-600 text-sm font-medium mb-4">
+              UI Developer • React Frontend
             </p>
-          </div>
-          <div className="flex items-center justify-between mt-6">
-            <button className="flex items-center gap-1.5 text-gray-500 text-sm font-medium hover:text-gray-700 transition">
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
-              Configure
-            </button>
-            {/* Toggle */}
-            <button
-              className={`relative w-12 h-6 rounded-full transition-colors duration-300 focus:outline-none  "bg-blue-500" : "bg-gray-200"}`}
-            >
-              <span
-                className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-300  "translate-x-6" : "translate-x-0"}`}
-              />
-            </button>
-          </div>
-        </div>
 
-        {/* Middle column: 3 stacked cards */}
-        <div className="flex flex-col gap-4">
-          {/* Trackers Connected */}
-          <div className="bg-white border rounded-xl border-gray-200 hover:shadow-xl p-5 ">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-gray-900 font-bold text-base">
-                  Trackers Connected
-                </p>
-                <p className="text-gray-400 text-xs mt-0.5">
-                  09 Active Integrations
-                </p>
-              </div>
-              <div className="flex gap-1.5">
-                {/* Teams icon */}
-                <div className="w-7 h-7 bg-purple-600 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">T</span>
-                </div>
-                {/* Slack icon */}
-                <div className="w-7 h-7 bg-pink-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">S</span>
-                </div>
-                {/* Jira icon */}
-                <div className="w-7 h-7 bg-blue-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">J</span>
-                </div>
-              </div>
-            </div>
-          </div>
+            <p className="text-gray-500 text-sm leading-relaxed">
+              UI Developer with 3+ years of experience building scalable,
+              responsive, and pixel-perfect interfaces using React, Next.js,
+              Tailwind CSS, and Figma Dev Mode.
+            </p>
 
-          {/* Focusing */}
-          <div className="bg-white rounded-xl  p-5 border border-gray-200 hover:shadow-xl">
-            <div className="flex items-start justify-between mb-1">
-              <div>
-                <p className="text-gray-900 font-bold text-base">Focusing</p>
-                <p className="text-gray-400 text-xs">Productivity Analytics</p>
-              </div>
-              <span className="text-blue-500 text-xs font-semibold bg-blue-50 px-2 py-0.5 rounded-xs">
-                Range Ratio
+            <div className="mt-6 flex flex-wrap gap-2">
+              <span className="px-3 py-1 rounded-sm bg-gray-100 text-xs text-gray-700">
+                React
               </span>
-            </div>
-            <p className="text-5xl font-extrabold text-gray-900 mt-3 tracking-tight">
-              99%
-            </p>
-            <div className="flex justify-between mt-2">
-              <span className="text-gray-400 text-xs">Maximum of focus</span>
-              <span className="text-gray-500 text-xs font-semibold">
-                Monthly Focus
+
+              <span className="px-3 py-1 rounded-sm bg-gray-100 text-xs text-gray-700">
+                Next.js
+              </span>
+
+              <span className="px-3 py-1 rounded-sm bg-gray-100 text-xs text-gray-700">
+                Tailwind
+              </span>
+
+              <span className="px-3 py-1 rounded-sm bg-gray-100 text-xs text-gray-700">
+                Figma
               </span>
             </div>
           </div>
 
-          {/* Shortcut Keys */}
-          <div className="bg-white rounded-xl px-5 py-4 border border-gray-200 hover:shadow-xl flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-blue-50 rounded-xl flex items-center justify-center">
-                <svg
-                  className="w-4 h-4 text-blue-500"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-                  />
-                </svg>
-              </div>
-              <div>
-                <p className="text-gray-900 font-semibold text-sm">
-                  Shortcut Keys
-                </p>
-                <p className="text-gray-400 text-xs">
-                  Faster easier way to access the features.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center gap-1">
-              <kbd className="bg-gray-100 text-gray-600 text-xs font-semibold px-2 py-1 rounded-lg">
-                ⌘
-              </kbd>
-              <span className="text-gray-400 text-xs">+</span>
-              <kbd className="bg-gray-100 text-gray-600 text-xs font-semibold px-2 py-1 rounded-lg">
-                ⌥
-              </kbd>
-              <span className="text-gray-400 text-xs">+</span>
-              <kbd className="bg-gray-100 text-gray-600 text-xs font-semibold px-2 py-1 rounded-lg">
-                M
-              </kbd>
-            </div>
+          <div className="pt-6 border-t border-gray-100">
+            <p className="text-sm text-gray-400">Based in Kerala, India</p>
+
+            <p className="text-sm text-gray-900 font-medium mt-1">
+              Open to Remote Opportunities
+            </p>
           </div>
         </div>
 
-        {/* Card 3 - 10X + Team Productivity */}
-        <div className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-xl flex flex-col justify-between min-h-">
+        {/* Box 2 */}
+        <div className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-xl flex flex-col justify-between row-span-2  h-full">
           <div>
             <p className="text-8xl font-black text-gray-900 tracking-tighter leading-none">
-              500 +
+              500+
             </p>
-            <p className="text-gray-900 font-bold text-lg">Screens Developed</p>
+
+            <p className="text-gray-900 font-bold text-xl mt-2">
+              Screens Developed
+            </p>
           </div>
+
+          <div className="mt-6 space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="text-gray-500 text-sm">
+                Responsive UI Systems
+              </span>
+
+              <span className="text-gray-900 font-semibold">100%</span>
+            </div>
+
+            <div className="w-full h-2 rounded-full bg-gray-100 overflow-hidden">
+              <div className="w-full h-full bg-black rounded-full" />
+            </div>
+
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Built scalable dashboards, SaaS platforms, healthcare interfaces,
+              and reusable component systems across web and mobile applications.
+            </p>
+          </div>
+        </div>
+
+        {/* Box 3 */}
+        <div className="bg-white border rounded-xl border-gray-200 hover:shadow-xl p-6 flex items-center gap-3 h-fit">
+          <div className="min-w-10 h-10  rounded-full bg-black text-white flex items-center justify-center font-bold text-xs">
+            ⚡
+          </div>
+
+          <div>
+            <p className="text-gray-900 font-bold text-lg">Fast Delivery</p>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Rapid Figma-to-code workflow
+            </p>
+          </div>
+        </div>
+
+        {/* Box 4 */}
+        <div className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-xl h-full">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-gray-900 font-bold text-lg">Figma to Code</p>
+
+              <p className="text-gray-400 text-sm">Design Accuracy</p>
+            </div>
+
+            <div className="px-3 py-1 rounded-full bg-green-50 text-green-600 text-xs font-semibold">
+              Verified
+            </div>
+          </div>
+
           <div className="mt-6">
-            <p className="text-gray-900 font-bold text-lg">
-              Team's Productivity
+            <h2 className="text-6xl font-black text-gray-900 tracking-tight">
+              99%
+            </h2>
+
+            <p className="text-gray-400 text-sm mt-2">
+              Pixel-perfect implementation using Figma Dev Mode, Auto Layout,
+              and scalable component systems.
             </p>
-            <p className="text-gray-400 text-sm mt-1 leading-relaxed">
-              Boost your team's efficiency with our next-gen productivity
-              solutions.
+          </div>
+        </div>
+
+        {/* Box 5 */}
+        <div className="bg-white rounded-xl px-6 py-5 border border-gray-200 hover:shadow-xl flex items-center justify-between col-span-2">
+          <div>
+            <p className="text-gray-900 font-bold text-lg">Follow Me</p>
+
+            <p className="text-gray-400 text-sm mt-1">
+              Let’s connect and build something amazing.
             </p>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+              h-8 w-8
+              rounded-full
+              bg-gray-100
+              flex items-center justify-center
+              text-gray-600
+              hover:bg-blue-500 hover:text-white
+              transition
+            "
+            >
+              <FaLinkedinIn size={14} />
+            </a>
+
+            <a
+              href="https://wa.me/XXXXXXXXXX"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+              h-8 w-8
+              rounded-full
+              bg-gray-100
+              flex items-center justify-center
+              text-gray-600
+              hover:bg-green-500 hover:text-white
+              transition
+            "
+            >
+              <IoLogoWhatsapp size={14} />
+            </a>
+
+            <a
+              href="https://www.behance.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+              h-8 w-8
+              rounded-full
+              bg-gray-100
+              flex items-center justify-center
+              text-gray-600
+              hover:bg-blue-500 hover:text-white
+              transition
+            "
+            >
+              <FaBehance size={14} />
+            </a>
           </div>
         </div>
       </div>
@@ -433,45 +454,53 @@ export default function Home() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 max-w-6xl mt-12 gap-6">
         {/* Card 1 */}
-        <div>
+  
+
+         <div className="bg-white rounded-xl border border-gray-200 shadow-xl">
+          <div className="p-4">
+            <h2 className="text-gray-900 font-bold text-lg">ENVOCC</h2>
+            <p className="text-gray-400 text-sm mt-2">
+              UX Designer passionate about crafting intuitive user journeys and
+              meaningful digital experiences.
+            </p>
+          </div>
           <img
-            className="rounded-lg w-full h-64 object-cover border border-gray-400"
-            src="/nvo.webp"
-            alt="profile1"
+            className="rounded-lg w-full h-64 object-cover "
+              src="/nvo.webp"
+            alt="profile2"
           />
-          <h2 className="text-gray-900 font-bold text-lg mt-4">Aswanth UP</h2>
-          <p className="text-gray-400 text-sm mt-2">
-            UI Developer & Designer focused on building clean, scalable
-            interfaces using React and Tailwind CSS.
-          </p>
         </div>
 
         {/* Card 2 */}
-        <div>
+        <div className="bg-white rounded-xl border border-gray-200 shadow-xl">
+          <div className="p-4">
+            <h2 className="text-gray-900 font-bold text-lg">Happy ERP</h2>
+            <p className="text-gray-400 text-sm mt-2">
+              UX Designer passionate about crafting intuitive user journeys and
+              meaningful digital experiences.
+            </p>
+          </div>
           <img
             className="rounded-lg w-full h-64 object-cover "
             src="/happy2.webp"
             alt="profile2"
           />
-          <h2 className="text-gray-900 font-bold text-lg mt-4">Anjali Nair</h2>
-          <p className="text-gray-400 text-sm mt-2">
-            UX Designer passionate about crafting intuitive user journeys and
-            meaningful digital experiences.
-          </p>
         </div>
 
         {/* Card 3 */}
-        <div>
+        <div className="bg-white rounded-xl border border-gray-200 shadow-xl">
+          <div className="p-4">
+            <h2 className="text-gray-900 font-bold text-lg">Doctor One</h2>
+            <p className="text-gray-400 text-sm mt-2">
+              UX Designer passionate about crafting intuitive user journeys and
+              meaningful digital experiences.
+            </p>
+          </div>
           <img
-            className="rounded-lg w-full h-64 object-cover"
-            src="blo8.png"
-            alt="profile3"
+            className="rounded-lg w-full h-64 object-cover "
+            src="/blo8.png"
+            alt="profile2"
           />
-          <h2 className="text-gray-900 font-bold text-lg mt-4">Rahul Menon</h2>
-          <p className="text-gray-400 text-sm mt-2">
-            Frontend Engineer specializing in performance optimization and
-            modern JavaScript frameworks.
-          </p>
         </div>
       </div>
 
@@ -518,39 +547,136 @@ export default function Home() {
         </div>
       </div>
 
-      <section className=" py-16">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 items-start">
-          {/* Left: heading + badge + CTA */}
-          <div className="shrink-0 lg:w-64">
-            <h2 className="text-4xl font-bold text-gray-900 leading-tight mb-4">
-              Customers love <br />
-              Workhorse{" "}
-              <span role="img" aria-label="heart">
-                ❤️
-              </span>
-            </h2>
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto grid grid-cols-3 grid-rows-[1fr_auto] gap-6">
+          {/* Left */}
+          <div className="row-span-2 flex flex-col justify-between rounded-xl bg-gradient-to-br from-gray-900 to-black p-8 text-white">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 mb-6">
+                <div className="flex -space-x-2">
+                  <img
+                    src="/gokul.png"
+                    alt=""
+                    className="w-7 h-7 rounded-full border-2 border-black object-cover"
+                  />
+                  <img
+                    src="/Musthafa.png"
+                    alt=""
+                    className="w-7 h-7 rounded-full border-2 border-black object-cover"
+                  />
+                  <img
+                    src="/bav.png"
+                    alt=""
+                    className="w-7 h-7 rounded-full border-2 border-black object-cover"
+                  />
+                </div>
 
-            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-xl px-3 py-2">
-              <span className="text-xs text-gray-500">
-                Rated 4.97/5 from over 100+ verified reviews
-              </span>
+                <span className="text-xs text-gray-300">
+                  Trusted by founders & developers
+                </span>
+              </div>
+
+              <h2 className="text-3xl font-bold leading-tight tracking-tight w-[80%]">
+                Real feedback from people I worked with
+              </h2>
+
+              <p className="text-gray-400 text-sm leading-relaxed mt-6 max-w-sm">
+                UI Developer focused on building scalable, modern, and
+                pixel-perfect frontend experiences with React, Tailwind, and
+                Figma workflows.
+              </p>
             </div>
 
-            <button className="mt-10 bg-gray-900 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-gray-700 transition-colors duration-200">
-              Request a demo
-            </button>
+            <div className="pt-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div>
+                  <p className="text-3xl font-bold">4.9/5</p>
+                  <p className="text-sm text-gray-400">
+                    Based on professional collaborations
+                  </p>
+                </div>
+              </div>
+
+              <button className="w-full bg-white text-black text-sm font-semibold px-6 py-4 rounded-2xl hover:bg-gray-200 transition-colors duration-200">
+                Let’s Work Together
+              </button>
+            </div>
           </div>
 
-          {/* Right: 2-column testimonial grid */}
-          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {testimonials.map((t) => (
-              <TestimonialCard key={t.name} testimonial={t} />
-            ))}
+          {/* Top Large Card */}
+          <div className="col-span-2">
+            <TestimonialCard testimonial={testimonials[0]} />
+          </div>
+
+          {/* Bottom Small Card */}
+          <div className="h-full">
+            <TestimonialCard testimonial={testimonials[1]} />
+          </div>
+
+          {/* Bottom Wide Card */}
+          <div className="h-full">
+            <TestimonialCard testimonial={testimonials[2]} />
           </div>
         </div>
       </section>
 
-      <div className="h-80 mt-36">Comming soon..</div>
+      <div className="container relative w-6xl mb-24 mt-16">
+        {/* Main content */}
+        <div className="h-80 rounded-2xl bg-white border-gray-200 border relative flex items-center justify-center overflow-hidden">
+          {/* Circular elements */}
+          <div className="absolute">
+            <div className="relative h-64 w-64 md:h-96 md:w-96 border border-gray-800/10 rounded-full">
+              <img
+                className="scale-90 absolute border-8 border-white/10 md:top-12 md:left-1 rounded-full h-16 w-16 object-cover"
+                src="https://images.unsplash.com/photo-1525186402429-b4ff38bedec6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div className="absolute">
+            <div className="relative h-[36rem] w-[38rem] border border-gray-800/10 rounded-full">
+              <img
+                className="absolute border-8 border-white/10 top-[22rem] right-[-1.1rem] rounded-full h-16 w-16 object-cover"
+                src="https://images.unsplash.com/photo-1525186402429-b4ff38bedec6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <img
+                className="absolute border-8 border-white/10 top-80 left-[-1.6rem] rounded-full h-16 w-16 object-cover"
+                src="https://images.unsplash.com/photo-1525186402429-b4ff38bedec6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div className="absolute">
+            <div className="relative h-[52rem] w-[52rem] border border-gray-800/10 rounded-full">
+              <img
+                className="absolute border-8 border-white/10 top-[22rem] right-[-2rem] rounded-full h-16 w-16 object-cover"
+                src="https://images.unsplash.com/photo-1514626585111-9aa86183ac98?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <img
+                className="absolute border-8 border-white/10 top-80 left-[-1.6rem] rounded-full h-16 w-16 object-cover"
+                src="https://images.unsplash.com/photo-1542596594-649edbc13630?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div className="absolute flex flex-col items-center">
+            <h1 className="text-2xl text-black font-semibold">
+              Let's <span className="text-indigo-500">Create </span>Something
+            </h1>
+            <h1 className="text-2xl text-black font-light">
+              Amazing <span className="text-indigo-500">Together!</span>
+            </h1>
+            <button className="mt-6 h-12 w-36 bg-blue-500 text-white rounded-md hover:bg-white/90 transition-colors">
+              Contact Now
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
