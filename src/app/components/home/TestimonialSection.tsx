@@ -108,7 +108,7 @@ export default function TestimonialSection() {
                 />
 
                 <Image
-                  src="/Musthafa.png"
+                  src="/musthafa.png"
                   alt="Muhammadh Musthafa"
                   width={28}
                   height={28}
