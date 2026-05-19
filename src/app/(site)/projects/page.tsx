@@ -9,67 +9,115 @@ export default function Projects() {
     "All",
     "UI Development",
     "UI Design",
-    "Case Study",
-    "Illustration",
+    "Website",
+    "Graph Design",
     "Drawings",
   ];
 
   const projects = [
-    {
-      title: "Doctor One",
-      slug: "/projects/doctor-one",
-      category: "Case Study",
-      image:
-        "https://images.unsplash.com/photo-1549880181-56a44cf4a9a5",
-      tech: ["ReactJS", "Tailwind CSS"],
-    },
-    {
-      title: "Dashboard UI",
+     {
+      title: "Happy ERP",
       slug: "/projects/happy-erp",
-      category: "UI Design",
+      category: ["UI Design", "UI Development"],
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-      tech: ["Figma", "UI Design"],
+      tech: ["ReactJS", "Bootstrap 5"],
     },
     {
-      title: "React Web App",
-      slug: "/projects/react-web-app",
-      category: "UI Development",
+      title: "ZENOWAY",
+      slug: "/projects/zenoway",
+      category: ["UI Development", "UI Design"],
       image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+        "https://images.unsplash.com/photo-1582079767878-082f4300d386?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      tech: ["NextJS", "Tailwind CSS"],
+    },
+
+      {
+      title: "Doctor One",
+      slug: "/projects/doctor-one",
+      category: ["UI Development", "UI Design"],
+      image:
+        "doctor.jpg",
       tech: ["ReactJS", "Tailwind CSS"],
     },
+   
     {
-      title: "Character Illustration",
-      slug: "/projects/character-illustration",
-      category: "Illustration",
+      title: "NVOCC",
+      slug: "/projects/nvocc",
+      category: ["UI Development"],
       image:
-        "https://images.unsplash.com/photo-1549880181-56a44cf4a9a5",
-      tech: ["Illustrator"],
+        "/ship.webp",
+      tech: ["NextJS", "Tailwind CSS"],
+    },
+    {
+      title: "ASTRO BYTE",
+      slug: "/projects/astrobyte",
+      category: ["Graph Design"],
+      image: "/poster1.png",
+      tech: ["Photoshop"],
+    },
+    {
+      title: "Chaavie Solutions Poster",
+      slug: "/projects/chaaviesolutions",
+      category: ["Graph Design"],
+      image: "/poster2.png",
+      tech: ["Photoshop"],
+    },
+    {
+      title: "EID Poster",
+      slug: "/projects/eidposter",
+      category: ["Graph Design"],
+      image: "/poster3.png",
+      tech: ["Photoshop"],
     },
     {
       title: "Sketch Art",
       slug: "/projects/sketch-art",
-      category: "Drawings",
-      image:
-        "https://images.unsplash.com/photo-1513364776144-60967b0f800f",
+      category: ["Drawings"],
+      image: "/drawing.png",
       tech: ["Pencil Art"],
+    },
+    {
+      title: "Fotiq",
+      slug: "https://www.fotiq.uk/",
+      category: ["Website"],
+      image: "web3.png",
+      tech: ["React", "TailwindCSS"],
+    },
+    {
+      title: "Studio1Life",
+      slug: "https://studio1life.com/",
+      category: ["Website"],
+      image: "web1.png",
+      tech: ["React", "Bootstrap"],
+    },
+    {
+      title: "Car Care Mechanic",
+      slug: "https://carcaremechanic.com/",
+      category: ["Website"],
+      image: "web2.png",
+      tech: ["React", "TailwindCSS"],
     },
   ];
 
   const filtered =
     active === "All"
       ? projects
-      : projects.filter((p) => p.category === active);
+      : projects.filter((p) => p.category.includes(active));
 
   return (
     <div className="relative min-h-screen px-6 py-24">
       <div className="absolute inset-0 grid-bg z-0" />
 
       <div className="relative z-10 max-w-6xl mx-auto">
-        <h1 className="text-3xl font-semibold text-center text-gray-800 mb-10 mt-6">
-          My Works
-        </h1>
+        <h1 className="text-3xl font-semibold text-center text-gray-800 pt-12">
+  Crafted Digital Experiences
+</h1>
+
+<p className="text-center text-gray-500 mt-3 max-w-2xl mx-auto pb-12">
+  A collection of UI development, design, branding, and creative works
+  built with attention to detail and user-focused thinking.
+</p>
 
         {/* CATEGORY TABS */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -96,13 +144,13 @@ export default function Projects() {
                 <div className="rounded-2xl overflow-hidden relative">
                   <img
                     src={`${item.image}?auto=format&fit=crop&w=800&q=80`}
-                    className="w-full h-52 object-cover group-hover:scale-105 transition"
+                    className="w-full h-52 object-cover group-hover:scale-105 transition duration-500"
                     alt={item.title}
                   />
 
                   <div className="absolute w-full top-0 flex flex-col justify-between h-full">
                     {/* TECH TAGS */}
-                    <div className="flex gap-2 p-4">
+                    <div className="flex gap-2 p-4 flex-wrap">
                       {item.tech.map((tech, index) => (
                         <h1
                           key={index}
@@ -125,13 +173,20 @@ export default function Projects() {
 
                       <div className="absolute bottom-0 left-0 w-full h-16 backdrop-blur-xl mask-[linear-gradient(to_top,black,transparent)]"></div>
 
-                      <h3 className="relative z-10 text-md font-semibold text-gray-100 mt-1">
+                      <h3 className="relative z-10 text-md font-semibold text-white mt-1">
                         {item.title}
                       </h3>
 
-                      <span className="relative z-10 text-xs text-blue-500">
-                        {item.category}
-                      </span>
+                      <div className="flex gap-2 flex-wrap relative z-10 mt-2">
+                        {item.category.map((cat, index) => (
+                          <span
+                            key={index}
+                            className="text-xs text-blue-300"
+                          >
+                            {cat}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

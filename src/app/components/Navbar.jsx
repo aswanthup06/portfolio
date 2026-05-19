@@ -57,11 +57,11 @@ export default function Navbar() {
               Projects
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/blogs" className={navLinkClass("/blogs")}>
               Blogs
             </Link>
-          </li>
+          </li> */}
         </ul>
 
         {/* CTA */}
