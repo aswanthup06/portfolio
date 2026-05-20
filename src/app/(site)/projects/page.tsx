@@ -137,7 +137,7 @@ export default function Projects() {
         </div>
 
         {/* PROJECT GRID */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filtered.map((item, i) => (
             <Link href={item.slug} key={i}>
               <div className="group overflow-hidden transition cursor-pointer">

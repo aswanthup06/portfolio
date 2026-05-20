@@ -163,7 +163,7 @@ export default function About() {
         </div> */}
       </div>
 
-      <section className="w-full min-h-screen pt-20 px-4">
+      <section className="w-full min-h-screen pt-20">
         <div className="max-w-6xl mx-auto">
           {/* Hero Header - Minimal & Airy */}
           <div className="text-center max-w-2xl mx-auto mb-2">
@@ -178,14 +178,14 @@ export default function About() {
             </div>
           </div>
 
-          <div className="flex items-center mb-6 justify-between">
+          <div className="md:flex items-center mb-6 justify-between">
             <h1 className="text-xl md:text-4xl font-bold tracking-tight text-stone-900 mb-4">
               Craftsmanship<span className="text-amber-500">_</span>
               <br />
               Meets Code
             </h1>
             <div>
-              <p className="text-stone-500 text-lg max-w-lg mx-auto text-end">
+              <p className="text-stone-500 md:text-lg max-w-lg mx-auto md:text-end">
                 Wood grain, pencil strokes, and chisel marks — the foundation of
                 my design philosophy.
               </p>

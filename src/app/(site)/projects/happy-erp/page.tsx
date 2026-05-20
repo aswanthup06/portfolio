@@ -1,4 +1,35 @@
 export default function HappyERPPage() {
+  const screens = [
+    {
+      id: 1,
+      image: "/happy1.png",
+      alt: "Dashboard",
+      title: "Dashboard Overview",
+      description: "Real-time metrics",
+    },
+    {
+      id: 2,
+      image: "/happy2.png",
+      alt: "Inventory",
+      title: "Inventory Management",
+      description: "Stock levels and product tracking",
+    },
+    {
+      id: 3,
+      image: "/happy3.png",
+      alt: "Orders",
+      title: "Product list",
+      description: "Product list and details",
+    },
+    {
+      id: 4,
+      image: "/happy4.png",
+      alt: "Analytics",
+      title: "Sales Orders",
+      description: "Sales orders and status",
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-white text-black ">
       {/* <div className="border-b border-gray-100">
@@ -99,21 +130,20 @@ export default function HappyERPPage() {
 
       {/* OVERVIEW SECTION */}
       <section className="bg-gray-50 py-20">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 gap-6">
-          
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 gap-12 items-center">
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-rows-3 gap-4">
-            <div className="bg-white p-6 rounded-xl border border-gray-100 flex items-center gap-3">
-              <p className="text-3xl font-bold text-gray-900">40+</p>
-              <p className="text-sm text-gray-500 mt-1">Custom Screens</p>
+            <div className="bg-white rounded-xl border border-gray-100 flex items-center gap-3 p-4">
+              <p className="text-2xl font-bold text-gray-900 bg-gray-100 w-20 flex justify-center h-full items-center rounded-sm">40+</p>
+              <p className="text-md text-gray-500 mt-1">Custom Screens</p>
             </div>
-            <div className="bg-white p-6 rounded-xl border border-gray-100 flex items-center gap-3">
-              <p className="text-3xl font-bold text-gray-900">5</p>
-              <p className="text-sm text-gray-500 mt-1">Core Modules</p>
+            <div className="bg-white rounded-xl border border-gray-100 flex items-center gap-3 p-4">
+              <p className="text-2xl font-bold text-gray-900 bg-gray-100 w-20 flex justify-center h-full items-center rounded-sm p-2">5</p>
+              <p className="text-md text-gray-500 mt-1">Core Modules</p>
             </div>
-            <div className="bg-white p-6 rounded-xl border border-gray-100 flex items-center gap-3">
-              <p className="text-3xl font-bold text-gray-900">100%</p>
-              <p className="text-sm text-gray-500 mt-1">Responsive Design</p>
+            <div className="bg-white rounded-xl border border-gray-100 flex items-center gap-3 p-4">
+              <p className="text-2xl font-bold text-gray-900 bg-gray-100 w-20 flex justify-center h-full items-center rounded-sm">100%</p>
+              <p className="text-md text-gray-500 mt-1">Responsive Design</p>
             </div>
           </div>
           <div className="max-w-3xl">
@@ -131,7 +161,6 @@ export default function HappyERPPage() {
               and analytics.
             </p>
           </div>
-
         </div>
       </section>
 
@@ -236,9 +265,7 @@ export default function HappyERPPage() {
                 </svg>
               </div>
               <h3 className="font-semibold text-gray-800">Integration</h3>
-              <p className="text-sm text-gray-500 mt-2">
-                API integration
-              </p>
+              <p className="text-sm text-gray-500 mt-2">API integration</p>
             </div>
           </div>
         </div>
@@ -366,65 +393,25 @@ export default function HappyERPPage() {
           <h2 className="text-3xl font-bold text-gray-900 tracking-tight text-center">
             Screens & Interfaces
           </h2>
+
           <p className="text-gray-500 text-center mt-3">
             A selection of key screens from the HAPPY ERP platform
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-            <div className="bg-white rounded-xl overflow-hidden shadow-sm">
-              <img
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop"
-                alt="Dashboard"
-                className="w-full"
-              />
-              <div className="p-4 border-t border-gray-100">
-                <p className="font-medium text-gray-800">Dashboard Overview</p>
-                <p className="text-sm text-gray-400">
-                  Real-time KPIs and metrics
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            {screens.map((screen) => (
+              <div
+                key={screen.id}
+                className="overflow-hidden"
+              >
+                <img src={screen.image} alt={screen.alt} className="w-full shadow-sm rounded-lg"/>
+                <div className="mt-4">
+                  <p className="font-medium text-gray-800">{screen.title}</p>
+
+                  <p className="text-sm text-gray-400">{screen.description}</p>
+                </div>
               </div>
-            </div>
-            <div className="bg-white rounded-xl overflow-hidden shadow-sm">
-              <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1600&auto=format&fit=crop"
-                alt="Inventory"
-                className="w-full"
-              />
-              <div className="p-4 border-t border-gray-100">
-                <p className="font-medium text-gray-800">
-                  Inventory Management
-                </p>
-                <p className="text-sm text-gray-400">
-                  Stock levels and product tracking
-                </p>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl overflow-hidden shadow-sm">
-              <img
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600&auto=format&fit=crop"
-                alt="Orders"
-                className="w-full"
-              />
-              <div className="p-4 border-t border-gray-100">
-                <p className="font-medium text-gray-800">Order Management</p>
-                <p className="text-sm text-gray-400">
-                  Customer orders and fulfillment
-                </p>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl overflow-hidden shadow-sm">
-              <img
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop"
-                alt="Analytics"
-                className="w-full"
-              />
-              <div className="p-4 border-t border-gray-100">
-                <p className="font-medium text-gray-800">Analytics Dashboard</p>
-                <p className="text-sm text-gray-400">
-                  Sales trends and insights
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

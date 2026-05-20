@@ -12,7 +12,7 @@ export default function Home() {
     <div className="flex relative min-h-screen pt-24 flex-col items-center font-sans scroll-smooth">
       <div className="absolute inset-0 grid-bg -z-10" />
 
-      <div className="flex flex-col gap-22">
+      <div className="flex flex-col gap-22 px-6 md:px-0">
         <HeroSection />
 
         <AboutSection />

@@ -46,14 +46,14 @@ export default function TestimonialSection() {
     >
       {/* Header */}
       <div className="max-w-6xl mx-auto mb-12">
-        <h2 className="font-bold text-sm md:text-base text-gray-900">
-          Why Aswanth?
-        </h2>
+  <h2 className="font-bold text-sm md:text-base text-gray-900">
+    Testimonials
+  </h2>
 
-        <p className="text-2xl md:text-3xl text-slate-500/60 leading-snug">
-          Blending UI design and development into seamless products.
-        </p>
-      </div>
+  <p className="text-2xl md:text-3xl text-slate-500/60 leading-snug">
+    Real feedback from people who experienced my work firsthand.
+  </p>
+</div>
 
       {/* Grid */}
       <div

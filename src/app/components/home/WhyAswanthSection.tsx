@@ -218,7 +218,7 @@ export default function WhyAswanthSection() {
                 </div>
                 {/* Box 2 */}{" "}
                 <div className="border border-gray-200 rounded-xl overflow-hidden">
-                  <img src="/kannur.png" alt="" />
+                  <img src="/kannur.webp" alt="" />
                 </div>
                 <div className="border border-blue-100 bg-blue-50 rounded-xl p-4 flex items-center justify-between gap-2">
                   <div>

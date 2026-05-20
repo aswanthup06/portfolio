@@ -20,8 +20,8 @@ export default function Navbar() {
     }`;
 
   return (
-    <div className="flex items-center justify-center fixed w-full z-30">
-      <nav className="border shadow-2xl bg-white border-gray-200 rounded h-14 flex gap-24 items-center px-2 w-fit mt-4">
+    <div className="flex items-center justify-center fixed w-full z-30 px-6">
+      <nav className="border shadow-2xl bg-white border-gray-200 rounded h-14 flex gap-24 items-center px-2 w-full  md:w-fit mt-4 justify-between">
 
         {/* Logo */}
         <Link
@@ -41,7 +41,7 @@ export default function Navbar() {
         </Link>
 
         {/* Navigation */}
-        <ul className="flex gap-4">
+        <ul className="md:flex gap-4 hidden">
           <li>
             <Link href="/" className={navLinkClass("/")}>
               Home

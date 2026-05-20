@@ -107,7 +107,7 @@ export default function Footer() {
 
               {/* Right */}
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10">
 
                 {/* Navigation */}
 
@@ -263,9 +263,6 @@ export default function Footer() {
 
             </div>
 
-            {/* ====================================== */}
-            {/* Bottom Section */}
-            {/* ====================================== */}
 
             <div className="mt-10 pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
 

@@ -13,7 +13,7 @@ export default function AboutSection() {
       className="w-full flex flex-col items-center"
     >
       {/* Header */}
-      <div className="flex items-end justify-between w-full max-w-6xl">
+      <div className=" md:flex  items-end justify-between w-full max-w-6xl">
         <div>
           <h2 className="font-bold text-sm md:text-base text-gray-900">
             About Me
@@ -27,6 +27,7 @@ export default function AboutSection() {
         <Link
           href="/about"
           className="
+          md:mt-0 mt-3
             bg-gradient-to-b
             from-blue-400
             to-blue-600

@@ -4,17 +4,6 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 
 const projects = [
   {
-    title: "ENVOCC",
-    description:
-      "A modern logistics and shipping management platform focused on improving operational workflows, dashboard usability, and enterprise-level user experience.",
-    image: "/nvo.webp",
-    link: "/projects/nvocc",
-    tech: ["React", "Next.js", "Tailwind"],
-    type: "Dashboard",
-    role:"UI Development"
-  },
-
-  {
     title: "Happy ERP",
     description:
       "A complete ERP dashboard system designed for managing business operations with clean UI architecture, scalable layouts, and responsive data-driven interfaces.",
@@ -22,20 +11,29 @@ const projects = [
     link: "/projects/happy-erp",
     tech: ["React", "ERP", "Dashboard"],
     type: "Dashboard & Website",
-    role:"UI Design & UI Development"
+    role: "UI Design & UI Development",
+  },
+  {
+    title: "ENVOCC",
+    description:
+      "A modern logistics and shipping management platform focused on improving operational workflows, dashboard usability, and enterprise-level user experience.",
+    image: "/nvo.webp",
+    link: "/projects/nvocc",
+    tech: ["React", "Next.js", "Tailwind"],
+    type: "Dashboard",
+    role: "UI Development",
   },
 
   {
     title: "Doctor One",
     description:
       "A healthcare-focused digital platform built to simplify patient interactions, appointment management, and medical service accessibility through intuitive design.",
-    image: "/dr1.png",
+    image: "/dr1.webp",
     link: "/projects/doctor-one",
     tech: ["Healthcare", "Next.js", "UI UX"],
     type: "Dashboard & Website",
-    role:"UI Design & UI Development"
+    role: "UI Design & UI Development",
   },
-  
 ];
 
 export default function ProjectsSection() {
@@ -220,7 +218,7 @@ export default function ProjectsSection() {
                     </p>
 
                     <h1 className="text-sm font-semibold text-gray-900 mt-1">
-                     {project.role}
+                      {project.role}
                     </h1>
                   </div>
                 </div>

@@ -18,22 +18,22 @@ export default function HeroSection() {
   return (
     <>
       <div className="pt-20 flex items-center flex-col">
-        <div className="flex items-center justify-center text-blue-500 font-semibold">
+        <div className="flex items-center justify-center text-blue-500 font-semibold text-sm md:text-md lg:text-lg">
           Personal Portfolio
         </div>
 
         <div className="">
-          <h1 className="text-6xl text-center font-semibold text-gray-700">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl text-center font-semibold text-gray-700">
             Building <span className="text-blue-500">User-Centric</span>
           </h1>
 
-          <h1 className="text-6xl text-center font-semibold  mb-4 text-gray-700">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl text-center font-semibold  mb-4 text-gray-700">
             Web Experiences
           </h1>
         </div>
 
         <div className="flex justify-center">
-          <p className="text-md text-center text-gray-500  w-7/12 ">
+          <p className="text-md text-center text-gray-500  md:w-7/12 text-sm md:text-lg">
             Bridging UI/UX excellence with clean, performant code. I specialize
             in transforming complex workflows into intuitive, user-centric web
             applications
