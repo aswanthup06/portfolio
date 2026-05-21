@@ -7,7 +7,7 @@ export default function Projects() {
 
   const categories = [
     "All",
-    "UI Development",
+    "Web Application",
     "UI Design",
     "Website",
     "Graph Design",
@@ -18,7 +18,7 @@ export default function Projects() {
      {
       title: "Happy ERP",
       slug: "/projects/happy-erp",
-      category: ["UI Design", "UI Development"],
+      category: ["UI Design", "Web Application"],
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
       tech: ["ReactJS", "Bootstrap 5"],
@@ -26,7 +26,7 @@ export default function Projects() {
     {
       title: "ZENOWAY",
       slug: "/projects/zenoway",
-      category: ["UI Development", "UI Design"],
+      category: ["Web Application", "UI Design"],
       image:
         "https://images.unsplash.com/photo-1582079767878-082f4300d386?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       tech: ["NextJS", "Tailwind CSS"],
@@ -35,7 +35,7 @@ export default function Projects() {
       {
       title: "Doctor One",
       slug: "/projects/doctor-one",
-      category: ["UI Development", "UI Design"],
+      category: ["Web Application", "UI Design"],
       image:
         "doctor.jpg",
       tech: ["ReactJS", "Tailwind CSS"],
@@ -44,7 +44,7 @@ export default function Projects() {
     {
       title: "NVOCC",
       slug: "/projects/nvocc",
-      category: ["UI Development"],
+      category: ["Web Application"],
       image:
         "/ship.webp",
       tech: ["NextJS", "Tailwind CSS"],
