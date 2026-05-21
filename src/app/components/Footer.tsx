@@ -16,11 +16,11 @@ export default function Footer() {
   return (
     <footer className="w-full pt-24 pb-6">
 
-      <div className="max-w-6xl mx-auto">
+      <div className="px-6">
 
         {/* Main Container */}
 
-        <div className="relative overflow-hidden rounded-xl border border-gray-200 bg-white shadow-[0_10px_60px_rgba(0,0,0,0.06)]">
+        <div className="max-w-6xl mx-auto relative overflow-hidden rounded-xl border border-gray-200 bg-white shadow-[0_10px_60px_rgba(0,0,0,0.06)]">
 
           {/* Background Blur */}
 
@@ -146,14 +146,14 @@ export default function Footer() {
                       </Link>
                     </li>
 
-                    <li>
+                    {/* <li>
                       <Link
                         href="/blogs"
                         className="text-gray-500 hover:text-blue-500 transition"
                       >
                         Blogs
                       </Link>
-                    </li>
+                    </li> */}
 
                   </ul>
                 </div>

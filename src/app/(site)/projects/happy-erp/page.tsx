@@ -131,21 +131,6 @@ export default function HappyERPPage() {
       {/* OVERVIEW SECTION */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 gap-12 items-center">
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-rows-3 gap-4">
-            <div className="bg-white rounded-xl border border-gray-100 flex items-center gap-3 p-4">
-              <p className="text-2xl font-bold text-gray-900 bg-gray-100 w-20 flex justify-center h-full items-center rounded-sm">40+</p>
-              <p className="text-md text-gray-500 mt-1">Custom Screens</p>
-            </div>
-            <div className="bg-white rounded-xl border border-gray-100 flex items-center gap-3 p-4">
-              <p className="text-2xl font-bold text-gray-900 bg-gray-100 w-20 flex justify-center h-full items-center rounded-sm p-2">5</p>
-              <p className="text-md text-gray-500 mt-1">Core Modules</p>
-            </div>
-            <div className="bg-white rounded-xl border border-gray-100 flex items-center gap-3 p-4">
-              <p className="text-2xl font-bold text-gray-900 bg-gray-100 w-20 flex justify-center h-full items-center rounded-sm">100%</p>
-              <p className="text-md text-gray-500 mt-1">Responsive Design</p>
-            </div>
-          </div>
           <div className="max-w-3xl">
             <h2 className="text-3xl font-bold text-gray-900 tracking-tight">
               Overview
@@ -160,6 +145,27 @@ export default function HappyERPPage() {
               centralized platform that connects inventory, sales, procurement,
               and analytics.
             </p>
+          </div>
+          {/* Stats */}
+          <div className="grid grid-cols-1 md:grid-rows-3 gap-4">
+            <div className="bg-white rounded-xl border border-gray-100 flex items-center gap-3 p-4">
+              <p className="text-2xl font-bold text-gray-900 bg-gray-100 w-20 flex justify-center h-full items-center rounded-sm">
+                40+
+              </p>
+              <p className="text-md text-gray-500 mt-1">Custom Screens</p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-100 flex items-center gap-3 p-4">
+              <p className="text-2xl font-bold text-gray-900 bg-gray-100 w-20 flex justify-center h-full items-center rounded-sm p-2">
+                5
+              </p>
+              <p className="text-md text-gray-500 mt-1">Core Modules</p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-100 flex items-center gap-3 p-4">
+              <p className="text-2xl font-bold text-gray-900 bg-gray-100 w-20 flex justify-center h-full items-center rounded-sm">
+                100%
+              </p>
+              <p className="text-md text-gray-500 mt-1">Responsive Design</p>
+            </div>
           </div>
         </div>
       </section>
@@ -400,11 +406,12 @@ export default function HappyERPPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
             {screens.map((screen) => (
-              <div
-                key={screen.id}
-                className="overflow-hidden"
-              >
-                <img src={screen.image} alt={screen.alt} className="w-full shadow-sm rounded-lg"/>
+              <div key={screen.id} className="overflow-hidden">
+                <img
+                  src={screen.image}
+                  alt={screen.alt}
+                  className="w-full shadow-sm rounded-lg"
+                />
                 <div className="mt-4">
                   <p className="font-medium text-gray-800">{screen.title}</p>
 
