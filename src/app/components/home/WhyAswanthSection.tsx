@@ -23,17 +23,17 @@ export default function WhyAswanthSection() {
         </div>
 
         {/* Main Grid */}
-        <div className=" bg-gray-600/10 w-full mt-10 p-2 grid grid-cols-1 lg:grid-cols-3 gap-2 rounded-2xl">
+        <div className=" bg-gray-600/10 w-full mt-10 p-2 grid md:grid-cols-2 lg:grid-cols-3 gap-2 rounded-2xl">
           {/* ========================================= */}
           {/* 1st Column */}
           {/* ========================================= */}
 
-          <div className="bg-white rounded-xl overflow-hidden relative lg:min-h-full group">
+          <div className="bg-white rounded-xl overflow-hidden relative h-200 sm:min-h-170 lg:h-full  group">
             {/* Overlay Content */}
             <div className="absolute inset-0 z-10 p-6 flex flex-col justify-between bg-gradient-to-b from-black/20 via-black/10 to-black/60 text-white transition-all duration-500 group-hover:backdrop-blur-sm">
               {/* Top Content */}
               <div>
-                <div className="w-fit px-3 py-1 rounded-sm bg-white/10 border border-white/10 backdrop-blur-md text-[11px] tracking-[0.2em] uppercase text-white/90">
+                <div className="w-fit  px-3 py-1 rounded-sm bg-white/10 border border-white/10 backdrop-blur-md text-[11px] tracking-[0.2em] uppercase text-white/90">
                   Work Approach
                 </div>
 
@@ -98,7 +98,7 @@ export default function WhyAswanthSection() {
               className="h-full w-full object-cover scale-100 group-hover:scale-105 duration-700"
             />
           </div>
-          <div className="h-full grid grid-rows-[190px_1fr] gap-2">
+          <div className="sm:min-h-170 h-190 lg:h-full grid grid-rows-[190px_1fr] gap-2">
             {/* Accuracy Card */}
 
             <div className="p-5 bg-white rounded-xl border border-gray-200 flex flex-col justify-between overflow-hidden">
