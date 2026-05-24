@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { FaWebflow } from "react-icons/fa6";
 import { useContactModal } from '../context/ContactModalContext';
+import { BsGlobe } from "react-icons/bs";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -37,7 +38,7 @@ export default function Navbar() {
             transition-all duration-200
           "
         >
-          <FaWebflow />
+          <BsGlobe className="text-md" />
         </Link>
 
         {/* Navigation */}

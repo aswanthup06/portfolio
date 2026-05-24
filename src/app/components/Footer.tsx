@@ -10,6 +10,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { FaWebflow } from "react-icons/fa6";
 import { useContactModal } from "../context/ContactModalContext";
+import { BsGlobe } from "react-icons/bs";
 
 export default function Footer() {
     const { openModal } = useContactModal();
@@ -54,7 +55,7 @@ export default function Footer() {
                       shadow-[inset_0_1px_0_rgba(255,255,255,0.25),inset_0_-1px_0_rgba(0,0,0,0.18)]
                     "
                   >
-                    <FaWebflow className="text-lg" />
+                    <BsGlobe className="text-md" />
                   </div>
 
                   <div>
