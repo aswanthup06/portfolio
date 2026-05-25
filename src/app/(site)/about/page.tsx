@@ -94,6 +94,12 @@ export default function About() {
             My Journey
           </h2>
 
+          <p className="text-center text-gray-500 max-w-2xl mx-auto -mt-10 mb-16 leading-relaxed">
+  From creative beginnings in art and craftsmanship to building modern
+  digital experiences, my journey has been shaped by design, curiosity,
+  and continuous learning.
+</p>
+
           <div className="relative">
             <div className="absolute left-1/2 top-0 h-full w-0.5 bg-gray-200 transform -translate-x-1/2"></div>
 
@@ -233,30 +239,34 @@ export default function About() {
               </div>
             </div>
 
-            {/* Card 2: Kerala State Achievements - 5 Times A Grade */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition border border-stone-100">
-              <div className="flex items-start justify-between mb-4">
-                <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 text-xl">
-                  🏅
-                </div>
-                <span className="text-xs font-mono bg-stone-100 px-2 py-1 rounded text-stone-500">
-                  5×
-                </span>
-              </div>
-              <h3 className="font-bold text-lg text-stone-800 mb-1">
-                State Level Excellence
-              </h3>
-              <p className="text-stone-500 text-sm leading-relaxed mb-3">
-                <span className="font-semibold text-emerald-600">
-                  5 Times 'A Grade'
-                </span>{" "}
-                — Kerala State Level Recognition
-              </p>
-              <p className="text-xs text-stone-400">
-                Achieved during School, +1, and +2 years · State-wide
-                craftsmanship exhibitions
-              </p>
-            </div>
+           {/* Card 2: Kerala State School Kalolsavam Achievement */}
+<div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition border border-stone-100">
+  <div className="flex items-start justify-between mb-4">
+    <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 text-xl">
+      🏅
+    </div>
+
+    <span className="text-xs font-mono bg-stone-100 px-2 py-1 rounded text-stone-500">
+      5×
+    </span>
+  </div>
+
+  <h3 className="font-bold text-lg text-stone-800 mb-1">
+    Kerala State Achievement
+  </h3>
+
+  <p className="text-stone-500 text-sm leading-relaxed mb-3">
+    <span className="font-semibold text-emerald-600">
+      5 Times A Grade
+    </span>{" "}
+    in Wood Carving at Kerala State School Sasthrolsavam
+    (Work Experience Category)
+  </p>
+
+  <p className="text-xs text-stone-400">
+    Achieved during School, +1, and +2 years through state-level.
+  </p>
+</div>
 
             {/* Card 3: District Level Dominance */}
             <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition border border-stone-100">

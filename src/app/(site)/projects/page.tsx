@@ -18,7 +18,7 @@ export default function Projects() {
      {
       title: "Happy ERP",
       slug: "/projects/happy-erp",
-      category: ["UI Design", "Web Application"],
+      category: ["Web Application","UI Design"],
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
       tech: ["ReactJS", "Bootstrap 5"],
@@ -49,6 +49,41 @@ export default function Projects() {
         "/ship.webp",
       tech: ["NextJS", "Tailwind CSS"],
     },
+     {
+      title: "Fotiq",
+      slug: "https://www.fotiq.uk/",
+      category: ["Website"],
+      image: "web3.png",
+      tech: ["React", "TailwindCSS"],
+    },
+    {
+      title: "Studio1Life",
+      slug: "https://studio1life.com/",
+      category: ["Website"],
+      image: "web1.png",
+      tech: ["React", "Bootstrap"],
+    },
+    {
+      title: "Car Care Mechanic",
+      slug: "https://carcaremechanic.com/",
+      category: ["Website"],
+      image: "web2.png",
+      tech: ["React", "TailwindCSS"],
+    },
+      {
+      title: "Kathakali & Theyyam",
+      slug: "/projects/kathakali",
+      category: ["Graph Design"],
+      image: "/kadha.webp",
+      tech: ["Illustrator"],
+    },
+          {
+      title: "DR1 - Icon Design",
+      slug: "/projects/icon",
+      category: ["Graph Design"],
+      image: "/Pharmacy.webp",
+      tech: ["Illustrator"],
+    },
     {
       title: "ASTRO BYTE",
       slug: "/projects/astrobyte",
@@ -77,27 +112,7 @@ export default function Projects() {
       image: "/drawing.png",
       tech: ["Pencil Art"],
     },
-    {
-      title: "Fotiq",
-      slug: "https://www.fotiq.uk/",
-      category: ["Website"],
-      image: "web3.png",
-      tech: ["React", "TailwindCSS"],
-    },
-    {
-      title: "Studio1Life",
-      slug: "https://studio1life.com/",
-      category: ["Website"],
-      image: "web1.png",
-      tech: ["React", "Bootstrap"],
-    },
-    {
-      title: "Car Care Mechanic",
-      slug: "https://carcaremechanic.com/",
-      category: ["Website"],
-      image: "web2.png",
-      tech: ["React", "TailwindCSS"],
-    },
+   
   ];
 
   const filtered =
@@ -177,16 +192,17 @@ export default function Projects() {
                         {item.title}
                       </h3>
 
-                      <div className="flex gap-2 flex-wrap relative z-10 mt-2">
-                        {item.category.map((cat, index) => (
-                          <span
-                            key={index}
-                            className="text-xs text-blue-300"
-                          >
-                            {cat}
-                          </span>
-                        ))}
-                      </div>
+                 <div className="flex flex-wrap relative z-10 mt-2 text-xs text-blue-300">
+  {item.category.map((cat, index) => (
+    <span key={index} className="flex items-center">
+      <span>{cat}</span>
+
+      {index < item.category.length - 1 && (
+        <span className="mx-1">&</span>
+      )}
+    </span>
+  ))}
+</div>
                     </div>
                   </div>
                 </div>
