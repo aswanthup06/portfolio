@@ -23,7 +23,7 @@ const testimonials: Testimonial[] = [
     avatar: "/musthafa.png",
     quote:
       "Working with Aswanth has been a great experience. His UI/UX skills, creative thinking, and development knowledge help transform ideas into practical and user-friendly digital products. He has a professional approach and consistently delivers quality results.",
-    name: "Muhammadh Musthafa",
+    name: "Mohamad Musthafa",
     role: "Managing Director at G tec Kunnumpuram",
   },
 

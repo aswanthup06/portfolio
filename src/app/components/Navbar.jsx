@@ -22,8 +22,8 @@ export default function Navbar() {
     }`;
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 px-4 md:px-6 flex justify-center">
-      <nav className="relative border shadow-2xl bg-white border-gray-200 rounded-xl h-14 flex items-center justify-between px-2 w-full md:w-fit mt-4 md:gap-24">
+    <div className="fixed top-0 left-0 w-full z-30 px-4 md:px-6 flex justify-center ">
+      <nav className="relative border shadow-2xl bg-white border-gray-200 rounded-lg h-14 flex items-center justify-between px-2 w-full md:w-fit mt-4 md:gap-24">
         
         {/* Logo */}
         <Link
@@ -115,7 +115,7 @@ export default function Navbar() {
         {/* Mobile Menu */}
         <div
           className={`
-            absolute top-16 left-0 w-full bg-white border border-gray-200 rounded-xl shadow-xl p-4
+            absolute top-16 left-0 w-full bg-white border border-gray-200 rounded-lg shadow-xl p-4
             flex flex-col gap-4
             transition-all duration-300 md:hidden
             ${
