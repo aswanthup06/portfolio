@@ -113,7 +113,7 @@ export default function About() {
                 },
                 {
                   date: "Jan 2025 – Aug 2025",
-                  title: "6solve IT Services",
+                  title: "6solve IT Services (Contract through Chaavie)",
                   location: "Tirunelveli, Tamil Nadu",
                   desc: "Collaborated on Next.js projects, improving performance and scalability. Strengthened modern frontend architecture skills.",
                 },
@@ -158,15 +158,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        {/* JOURNEY SECTION END */}
-
-        {/* <div className="mt-16 text-center">
-          <p className="text-gray-500 mb-4">Interested in working together?</p>
-
-          <button className="px-6 h-10 rounded-md text-white bg-gradient-to-b from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 transition">
-            Contact Me
-          </button>
-        </div> */}
+  
       </div>
 
       <section className="w-full min-h-screen pt-20">
