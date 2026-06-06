@@ -14,9 +14,9 @@ import {
 
 export default function Zenoway() {
   const userScreens = [
-    { id: 1, src: "/zenoad2.webp", title: "Job Discovery", desc: "Browse opportunities" },
-    { id: 2, src: "/zenoad1.webp", title: "Application Flow", desc: "Direct HR contact" },
-    { id: 3, src: "/zenoad3.webp", title: "Career Portal", desc: "Simple navigation" },
+    { id: 1, src: "/assets/zenoway/zenoway1.webp", title: "Job Discovery", desc: "Browse opportunities" },
+    { id: 2, src: "/assets/zenoway/zenoway3.webp", title: "Application Flow", desc: "Direct HR contact" },
+    { id: 3, src: "/assets/zenoway/zenoway2.webp", title: "Career Portal", desc: "Simple navigation" },
   ];
 
   const adminScreens = [
@@ -213,11 +213,11 @@ export default function Zenoway() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {userScreens.map((item) => (
               <div key={item.id} className="group">
-                <div className="bg-gray-100 rounded-2xl overflow-hidden">
+                <div className="bg-gray-100  overflow-hidden border-gray-200 border">
                   <img
                     src={item.src}
                     alt={item.title}
-                    className="w-full h-60 object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    className="w-full  object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="mt-4">
