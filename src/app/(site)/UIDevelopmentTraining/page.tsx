@@ -75,7 +75,7 @@ export default function UIDevelopmentTraining() {
             Mentorship & Training
           </div>
 
-          <h1 className="mt-8 text-6xl font-light tracking-tight md:text-7xl">
+          <h1 className="mt-8 text-4xl font-light tracking-tight md:text-7xl">
             Learn UI Development
             <br />
             <span className="bg-gradient-to-r from-[#ff6b35] to-[#ffd700] bg-clip-text font-bold text-transparent">
