@@ -75,13 +75,13 @@ export default function UIDevelopmentTraining() {
             Mentorship & Training
           </div>
 
-          <h1 className="mt-8 text-4xl font-light tracking-tight md:text-7xl">
-            Learn UI Development
-            <br />
-            <span className="bg-gradient-to-r from-[#ff6b35] to-[#ffd700] bg-clip-text font-bold text-transparent">
-              Through Real Projects
-            </span>
-          </h1>
+          <h1 className="mt-8 text-4xl font-bold tracking-tight md:text-7xl">
+  Learn, Build, Launch
+  <br />
+  <span className="bg-gradient-to-r from-[#ff6b35] to-[#ffd700] bg-clip-text text-transparent">
+    Your UI Development Career
+  </span>
+</h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/60">
             A structured learning path covering HTML, CSS, Bootstrap,
